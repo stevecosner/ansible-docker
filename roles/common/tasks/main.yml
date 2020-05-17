@@ -1,0 +1,47 @@
+---
+
+- name: pull an image
+  docker_image:
+    name: ubuntu
+    tag:  16.04
+
+- name: Build image and with build args
+
+  docker_image:
+
+    name: ub16-apache-test
+
+    build:
+
+      path: .
+
+      args:
+
+#       log_volume: /var/log/myapp
+
+        listen_port: 80
+
+    source: build
+
+
+
+- name: start container
+
+  docker_container:
+
+    name: test-ub16-1
+
+    image: ub16-apache-test
+
+#    networks:
+
+#      - name: bridge
+
+#        ipv4_address: "172.17.0.100"
+
+    ports:
+
+     - "8081:80"
+    state: started
+    detach: yes
+    interactive: yes

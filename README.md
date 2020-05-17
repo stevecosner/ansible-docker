@@ -1,2 +1,2 @@
-# ansible-docker
-Create an Ubuntu Docker container running Apache with default static webpage.
+# docker-ansible-pull-image
+Pull down a Docker image using Ansible.

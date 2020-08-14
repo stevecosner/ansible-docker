@@ -1,15 +1,11 @@
 ---
 
-- name: pull an image
-  docker_image:
-    name: ubuntu
-    tag:  18.04
 
 - name: Build image and with build args
 
   docker_image:
 
-    name: ubuntu-1
+    name: nginx-1
 
     build:
 
@@ -29,9 +25,9 @@
 
   docker_container:
 
-    name: u1
+    name: n1
 
-    image: ubuntu-1
+    image: nginx-1
 
 #    networks:
 

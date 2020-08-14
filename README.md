@@ -1,2 +1,2 @@
 
-Pull, build and start a Docker container using Ansible.
+Pull, build and start an Ubuntu Docker container with Apache installed. 
